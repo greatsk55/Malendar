@@ -1,0 +1,51 @@
+<resources>
+
+    <!-- activity_layout -->
+    <dimen name="activity_layout_header_margin">0dp</dimen>
+    <dimen name="activity_layout_header_height">30dp</dimen>
+    <dimen name="activity_layout_header_padding">0dp</dimen>
+
+    <dimen name="activity_layout_body_margin">0dp</dimen>
+    <dimen name="activity_layout_body_padding">0dp</dimen>
+
+    <dimen name="activity_layout_left_margin">0dp</dimen>
+    <dimen name="activity_layout_left_padding">0dp</dimen>
+    <dimen name="activity_layout_center_margin">0dp</dimen>
+    <dimen name="activity_layout_center_padding">0dp</dimen>
+    <dimen name="activity_layout_right_margin">0dp</dimen>
+    <dimen name="activity_layout_right_padding">0dp</dimen>
+
+    <dimen name="activity_layout_footer_margin">0dp</dimen>
+    <dimen name="activity_layout_footer_height">50dp</dimen>
+    <dimen name="activity_layout_footer_padding">0dp</dimen>
+
+
+    <!-- element_layout -->
+    <dimen name="element_layout_header_margin">0dp</dimen>
+    <dimen name="element_layout_header_height">30dp</dimen>
+    <dimen name="element_layout_header_padding">0dp</dimen>
+
+    <dimen name="element_layout_body_margin">0dp</dimen>
+    <dimen name="element_layout_body_padding">0dp</dimen>
+
+    <dimen name="element_layout_left_margin">0dp</dimen>
+    <dimen name="element_layout_left_padding">0dp</dimen>
+    <dimen name="element_layout_center_margin">0dp</dimen>
+    <dimen name="element_layout_center_padding">0dp</dimen>
+    <dimen name="element_layout_right_margin">0dp</dimen>
+    <dimen name="element_layout_right_padding">0dp</dimen>
+
+    <dimen name="element_layout_footer_margin">0dp</dimen>
+    <dimen name="element_layout_footer_height">30dp</dimen>
+    <dimen name="element_layout_footer_padding">0dp</dimen>
+
+
+    <!-- element_footer -->
+
+    <dimen name="element_footer_footer_height">40dp</dimen>
+
+    <dimen name="divider">1dp</dimen>
+    <dimen name="leftmargin">1dp</dimen>
+    <dimen name="rightmargin">1dp</dimen>
+
+</resources>
