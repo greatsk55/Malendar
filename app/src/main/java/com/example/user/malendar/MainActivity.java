@@ -35,7 +35,7 @@ public class MainActivity extends Activity {
 
         CalendarPickerView calendar = (CalendarPickerView) findViewById(R.id.calendar_view);
         Date today = new Date();
-        calendar.init(, lastMonth.getTime())
+        calendar.init( thisMonth, lastMonth.getTime())
                 .withSelectedDate(today);
 
         calendar.setOnDateSelectedListener(new CalendarPickerView.OnDateSelectedListener() {
