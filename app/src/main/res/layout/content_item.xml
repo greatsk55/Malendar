@@ -4,14 +4,18 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_marginLeft="5dp"
-    android:layout_marginBottom="5dp"
-    android:background="?android:attr/selectableItemBackground">
+    android:layout_marginBottom="5dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/year"/>
 
     <ImageView
-            android:id="@+id/album_art1"
-            android:layout_width="match_parent"
-            android:layout_height="500dp"
-            android:scaleType="fitStart">
+        android:id="@+id/album_art1"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:scaleType="fitStart">
     </ImageView>
 
 </LinearLayout>
