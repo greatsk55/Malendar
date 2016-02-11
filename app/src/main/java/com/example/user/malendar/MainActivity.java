@@ -23,19 +23,19 @@ import java.util.Date;
 import com.squareup.timessquare.CalendarPickerView;
 
 public class MainActivity extends Activity {
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Calendar nextYear = Calendar.getInstance();
-        nextYear.add(Calendar.MONTH, 1);
+        Calendar lastMonth = Calendar.getInstance();
+        Calendar thisMonth = Calendar.getInstance();
+        thisMonth.set(Calendar.DATE,1);
+        lastMonth.set(Calendar.DATE, lastMonth.getMaximum(Calendar.DAY_OF_MONTH));
 
         CalendarPickerView calendar = (CalendarPickerView) findViewById(R.id.calendar_view);
         Date today = new Date();
-        calendar.init(today, nextYear.getTime())
+        calendar.init(, lastMonth.getTime())
                 .withSelectedDate(today);
 
         calendar.setOnDateSelectedListener(new CalendarPickerView.OnDateSelectedListener() {
