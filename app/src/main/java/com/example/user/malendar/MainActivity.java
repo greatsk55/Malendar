@@ -34,8 +34,8 @@ public class MainActivity extends Activity {
         lastMonth.set(Calendar.DATE, lastMonth.getMaximum(Calendar.DAY_OF_MONTH));
 
         CalendarPickerView calendar = (CalendarPickerView) findViewById(R.id.calendar_view);
-        Date today = new Date();
-        calendar.init( thisMonth, lastMonth.getTime())
+        Date today = thisMonth.getTime();
+        calendar.init( today, lastMonth.getTime())
                 .withSelectedDate(today);
 
         calendar.setOnDateSelectedListener(new CalendarPickerView.OnDateSelectedListener() {
