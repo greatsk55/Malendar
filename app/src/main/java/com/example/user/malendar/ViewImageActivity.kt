@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.graphics.Color;
 import android.media.ExifInterface;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -20,36 +21,38 @@ import java.util.Calendar;
  */
 
 //TODO 이미지에 해당 년도도 나오게하기, 액티비티 타이틀바에 해당 월일 나오게하기
-public class ViewImageActivity extends Activity {
+public class ViewImageActivity : AppCompatActivity() {
 
-    public RecyclerView recyclerView;
-    public ImageRecyclerAdapter contactAdapter;
 
-    @Override
-    public void onCreate(Bundle savedInstanceState){
+    private val recyclerView by lazy {
+        findViewById(R.id.list) as RecyclerView
+    }
+    public var contactAdapter : ImageRecyclerAdapter ?= null
+
+    override fun onCreate(savedInstanceState : Bundle?){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
 
-        ArrayList<ImageList> list = (ArrayList<ImageList>) getIntent().getSerializableExtra("list");
+        val list :  ArrayList<ImageList>  =  (getIntent().getSerializableExtra("list")) as ArrayList<ImageList>
+        val month = (getIntent().getStringExtra("month"))
+        val day = (getIntent().getStringExtra("day"))
 
-        recyclerView = (RecyclerView) findViewById(R.id.list);
-        recyclerView.addItemDecoration(new HorizontalDividerItemDecoration.Builder(this).
+        recyclerView.addItemDecoration( HorizontalDividerItemDecoration.Builder(this).
                 color(Color.LTGRAY).sizeResId(R.dimen.divider).marginResId(R.dimen.leftmargin, R.dimen.rightmargin).build());
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.setLayoutManager(LinearLayoutManager(this));
+        recyclerView.setItemAnimator(DefaultItemAnimator());
 
-        contactAdapter = new ImageRecyclerAdapter(this,
-                list, (LinearLayoutManager) recyclerView.getLayoutManager());
+        contactAdapter = ImageRecyclerAdapter(this,
+                list, recyclerView.getLayoutManager() as (LinearLayoutManager) );
         recyclerView.setAdapter(contactAdapter);
 
         try {
-            ExifInterface exifInterface = new ExifInterface(list.get(0).path);
-            String tmp = exifInterface.getAttribute(ExifInterface.TAG_DATETIME);
+            setTitle(month+"월 "+ day+"일");
 
-            setTitle(tmp.substring(5,7)+"월 "+ tmp.substring(8,10)+"일");
-
-        }catch(IOException e){
+        }catch(e : IOException ){
             e.printStackTrace();
         }
     }
 }
+
+
