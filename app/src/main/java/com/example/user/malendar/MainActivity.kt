@@ -1,5 +1,6 @@
 package com.example.user.malendar;
 
+import android.app.Activity
 import android.content.Intent
 import android.media.ExifInterface
 import android.os.Bundle
@@ -15,7 +16,7 @@ import java.io.IOException
 import java.util.*
 
 
-public class MainActivity : AppCompatActivity() {
+public class MainActivity : Activity() {
 
     private val calendar by lazy {
         findViewById(R.id.calendar_view) as CalendarPickerView

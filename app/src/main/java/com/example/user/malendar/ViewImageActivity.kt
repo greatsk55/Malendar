@@ -21,7 +21,7 @@ import java.util.Calendar;
  */
 
 //TODO 이미지에 해당 년도도 나오게하기, 액티비티 타이틀바에 해당 월일 나오게하기
-public class ViewImageActivity : AppCompatActivity() {
+public class ViewImageActivity : Activity() {
 
 
     private val recyclerView by lazy {

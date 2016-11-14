@@ -21,7 +21,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".ViewImageActivity"></activity>
-        <activity android:name=".MemoryActivity"></activity>
     </application>
 
 </manifest>
