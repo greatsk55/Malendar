@@ -27,6 +27,9 @@ public class MainActivity : Activity() {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        val c: Int;
+
+
         val lastMonth = Calendar.getInstance();
         val thisMonth = Calendar.getInstance();
         thisMonth.set(Calendar.DATE,1);
@@ -38,6 +41,8 @@ public class MainActivity : Activity() {
 
         calendar.setOnDateSelectedListener( object :  CalendarPickerView.OnDateSelectedListener {
             override fun onDateSelected(date : Date) {
+
+
 
                 TedPermission(applicationContext)
                         .setPermissionListener(object : PermissionListener {
